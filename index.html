@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario Responsivo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-900 via-purple-900 to-gray-900 text-white flex flex-col items-center justify-center min-h-screen px-4 overflow-x-hidden">
+  <!-- Título principal -->
+  <header class="text-center mb-8 w-full">
+    <h1 class="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+      El Agua: Ciclo, Contaminación y Desperdicio
+    </h1>
+    <p class="text-sm md:text-lg mt-2 text-gray-300">Explora los conceptos clave sobre el agua y su impacto en el medio ambiente.</p>
+  </header>
+
+  <!-- Contenedor principal -->
+  <div id="app" class="w-full max-w-xl p-4 bg-gray-800 rounded-lg shadow-lg flex flex-col items-center space-y-6">
+    <!-- Imagen de la mascota -->
+    <div class="flex items-center justify-center w-full">
+      <img src="Cecyto-Photoroom.png" alt="Mascota" class="h-[120px] md:h-[180px] w-auto rounded-lg shadow-md object-contain">
+    </div>
+
+    <!-- Contenido del cuestionario -->
+    <div class="w-full">
+      <!-- Contenedor de ingreso de nombre -->
+      <div id="name-input-container" class="text-center">
+        <h2 class="text-lg md:text-xl font-bold mb-4">Bienvenido al Cuestionario</h2>
+        <label for="username" class="block text-sm md:text-lg font-medium mb-2">Ingresa tu nombre:</label>
+        <input type="text" id="username" class="w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring focus:ring-purple-500 mb-4 placeholder-gray-400" placeholder="Tu nombre aquí...">
+        <button id="start-button" class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-2 px-4 rounded w-full transform transition-all duration-300 hover:scale-[1.05]">Comenzar</button>
+      </div>
+
+      <!-- Contenedor de preguntas -->
+      <div id="question-container" class="hidden mb-6 transition-opacity duration-500 ease-in-out opacity-0">
+        <!-- Pregunta y opciones dinámicas -->
+      </div>
+
+      <!-- Botón para avanzar -->
+      <button id="next-button" class="hidden bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white py-2 px-4 rounded w-full transform transition-all duration-300 hover:scale-[1.05]">Siguiente</button>
+
+      <!-- Contenedor de resultados -->
+      <div id="results" class="hidden mt-6 text-center">
+        <p id="score" class="text-lg md:text-xl font-bold animate-pulse"></p>
+        <button id="restart-button" class="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white py-2 px-4 rounded mt-4 transform transition-all duration-300 hover:scale-[1.05]">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="cuestionario.js"></script>
+</body>
+</html>
